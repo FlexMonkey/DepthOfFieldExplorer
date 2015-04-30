@@ -10,14 +10,45 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    let dofViewer = DepthOfFieldViewer()
+    let distanceStepper = UIStepper()
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.addSubview(dofViewer)
+        view.addSubview(distanceStepper)
+        
+        distanceStepper.minimumValue = 20
+        distanceStepper.maximumValue = 80
+        distanceStepper.stepValue = 20
+        distanceStepper.value = 20
+        dofViewer.camera.focalDistance = 20
+        
+        distanceStepper.addTarget(self, action: "distanceStepperChange", forControlEvents: .ValueChanged)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func distanceStepperChange()
+    {
+        
+        
+        UIView.animateWithDuration(0.25, animations:
+            {
+                self.dofViewer.camera.focalDistance = CGFloat(self.distanceStepper.value)
+            })
+    }
+    
+    override func viewDidLayoutSubviews()
+    {
+        dofViewer.frame = CGRect(x: 20, y: 20, width: view.frame.width - 30, height: view.frame.height - 100)
+        
+        distanceStepper.frame = CGRect(x: 20, y: view.frame.height - 30, width: 50, height: 30)
+    }
+    
+    override func supportedInterfaceOrientations() -> Int
+    {
+        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
     }
 
 

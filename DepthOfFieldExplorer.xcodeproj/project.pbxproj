@@ -13,6 +13,7 @@
 		3EB24FD31AF29B95001008F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EB24FD21AF29B95001008F6 /* Images.xcassets */; };
 		3EB24FD61AF29B95001008F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB24FD41AF29B95001008F6 /* LaunchScreen.xib */; };
 		3EB24FE21AF29B95001008F6 /* DepthOfFieldExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB24FE11AF29B95001008F6 /* DepthOfFieldExplorerTests.swift */; };
+		3EB24FED1AF29BF4001008F6 /* DepthOfFieldViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB24FEC1AF29BF4001008F6 /* DepthOfFieldViewer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		3EB24FDB1AF29B95001008F6 /* DepthOfFieldExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DepthOfFieldExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB24FE01AF29B95001008F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EB24FE11AF29B95001008F6 /* DepthOfFieldExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthOfFieldExplorerTests.swift; sourceTree = "<group>"; };
+		3EB24FEC1AF29BF4001008F6 /* DepthOfFieldViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthOfFieldViewer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		3EB24FC81AF29B95001008F6 /* DepthOfFieldExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				3EB24FEB1AF29BC4001008F6 /* dofViewer */,
 				3EB24FCB1AF29B95001008F6 /* AppDelegate.swift */,
 				3EB24FCD1AF29B95001008F6 /* ViewController.swift */,
 				3EB24FCF1AF29B95001008F6 /* Main.storyboard */,
@@ -110,6 +113,14 @@
 				3EB24FE01AF29B95001008F6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3EB24FEB1AF29BC4001008F6 /* dofViewer */ = {
+			isa = PBXGroup;
+			children = (
+				3EB24FEC1AF29BF4001008F6 /* DepthOfFieldViewer.swift */,
+			);
+			name = dofViewer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB24FED1AF29BF4001008F6 /* DepthOfFieldViewer.swift in Sources */,
 				3EB24FCE1AF29B95001008F6 /* ViewController.swift in Sources */,
 				3EB24FCC1AF29B95001008F6 /* AppDelegate.swift in Sources */,
 			);
