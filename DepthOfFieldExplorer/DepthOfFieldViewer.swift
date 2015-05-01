@@ -14,13 +14,13 @@ class DepthOfFieldViewer: SCNView
     
     override func didMoveToSuperview()
     {
-        antialiasingMode = SCNAntialiasingMode.Multisampling2X
+        antialiasingMode = SCNAntialiasingMode.Multisampling4X
         
         backgroundColor = UIColor(red: 0, green: 0, blue: 0.5, alpha: 1.0)
         layer.borderColor = UIColor.darkGrayColor().CGColor
         layer.borderWidth = 1
         
-        let torus = SCNTorus(ringRadius: 8, pipeRadius: 1.75)
+        let torus = SCNTorus(ringRadius: 8, pipeRadius: 2)
         torus.ringSegmentCount = 64
         
         var material: SCNMaterial = SCNMaterial()
@@ -30,20 +30,22 @@ class DepthOfFieldViewer: SCNView
         
         scene = thisScene
         
+        /*
+        scene?.fogStartDistance = 20
+        scene?.fogEndDistance = 80
+        scene?.fogDensityExponent = 0
+        scene?.fogColor = UIColor.blueColor().CGColor
+        */
+        
         // camera...
         
-        camera.xFov = 45
-        camera.yFov = 45
+        camera.xFov = 50
+        camera.yFov = 50
         
         let cameraNode = SCNNode()
         
         cameraNode.camera = camera
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 0)
-        
-        camera.focalDistance = 20
-        camera.focalBlurRadius = 1
-        camera.focalSize = 0
-        camera.aperture = 1 / 8
         
         thisScene.rootNode.addChildNode(cameraNode)
         
@@ -88,7 +90,7 @@ class DepthOfFieldViewer: SCNView
         omniLight.color = UIColor(white: 1.0, alpha: 1.0)
         let omniLightNode = SCNNode()
         omniLightNode.light = omniLight
-        omniLightNode.position = SCNVector3(x: -5, y: 8, z: 0)
+        omniLightNode.position = SCNVector3(x: -5, y: 8, z: 20)
         
         thisScene.rootNode.addChildNode(omniLightNode)
     }
