@@ -14,13 +14,17 @@ class DepthOfFieldViewer: SCNView
     
     override func didMoveToSuperview()
     {
+        antialiasingMode = SCNAntialiasingMode.Multisampling2X
+        
         backgroundColor = UIColor(red: 0, green: 0, blue: 0.5, alpha: 1.0)
         layer.borderColor = UIColor.darkGrayColor().CGColor
         layer.borderWidth = 1
         
         let torus = SCNTorus(ringRadius: 8, pipeRadius: 1.75)
+        torus.ringSegmentCount = 64
         
         var material: SCNMaterial = SCNMaterial()
+        material.diffuse.contents = UIImage(named: "checkerboard.jpg")
         
         let thisScene = SCNScene()
         
@@ -36,9 +40,10 @@ class DepthOfFieldViewer: SCNView
         cameraNode.camera = camera
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 0)
         
-        camera.focalDistance = 80
-        camera.focalBlurRadius = 10
-        camera.focalSize = 2
+        camera.focalDistance = 20
+        camera.focalBlurRadius = 1
+        camera.focalSize = 0
+        camera.aperture = 1 / 8
         
         thisScene.rootNode.addChildNode(cameraNode)
         

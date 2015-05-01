@@ -14,6 +14,7 @@
 		3EB24FD61AF29B95001008F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB24FD41AF29B95001008F6 /* LaunchScreen.xib */; };
 		3EB24FE21AF29B95001008F6 /* DepthOfFieldExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB24FE11AF29B95001008F6 /* DepthOfFieldExplorerTests.swift */; };
 		3EB24FED1AF29BF4001008F6 /* DepthOfFieldViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB24FEC1AF29BF4001008F6 /* DepthOfFieldViewer.swift */; };
+		3EB24FF01AF33D48001008F6 /* checkerboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EB24FEF1AF33D48001008F6 /* checkerboard.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		3EB24FE01AF29B95001008F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EB24FE11AF29B95001008F6 /* DepthOfFieldExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthOfFieldExplorerTests.swift; sourceTree = "<group>"; };
 		3EB24FEC1AF29BF4001008F6 /* DepthOfFieldViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthOfFieldViewer.swift; sourceTree = "<group>"; };
+		3EB24FEF1AF33D48001008F6 /* checkerboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkerboard.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				3EB24FEB1AF29BC4001008F6 /* dofViewer */,
 				3EB24FCB1AF29B95001008F6 /* AppDelegate.swift */,
 				3EB24FCD1AF29B95001008F6 /* ViewController.swift */,
+				3EB24FEE1AF33D48001008F6 /* assets */,
 				3EB24FCF1AF29B95001008F6 /* Main.storyboard */,
 				3EB24FD21AF29B95001008F6 /* Images.xcassets */,
 				3EB24FD41AF29B95001008F6 /* LaunchScreen.xib */,
@@ -121,6 +124,14 @@
 				3EB24FEC1AF29BF4001008F6 /* DepthOfFieldViewer.swift */,
 			);
 			name = dofViewer;
+			sourceTree = "<group>";
+		};
+		3EB24FEE1AF33D48001008F6 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				3EB24FEF1AF33D48001008F6 /* checkerboard.jpg */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 				3EB24FD11AF29B95001008F6 /* Main.storyboard in Resources */,
 				3EB24FD61AF29B95001008F6 /* LaunchScreen.xib in Resources */,
 				3EB24FD31AF29B95001008F6 /* Images.xcassets in Resources */,
+				3EB24FF01AF33D48001008F6 /* checkerboard.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
