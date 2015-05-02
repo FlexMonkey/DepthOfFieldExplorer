@@ -49,25 +49,10 @@ class DepthOfFieldViewer: SCNView
         
         // torus...
         
-        let torusNode = SCNNode(geometry: torus)
-        torusNode.position = SCNVector3(x: 0, y: 0, z: -20)
-        torusNode.rotation = SCNVector4(x: Float(0.0), y: Float(1.0), z: Float(1.0), w: Float(M_PI))
-        thisScene.rootNode.addChildNode(torusNode)
-        
-        let torusNode2 = SCNNode(geometry: torus)
-        torusNode2.position = SCNVector3(x: 10, y: 0, z: -40)
-        torusNode2.rotation = SCNVector4(x: Float(0.0), y: Float(1.0), z: Float(1.0), w: Float(M_PI))
-        thisScene.rootNode.addChildNode(torusNode2)
-        
-        let torusNode3 = SCNNode(geometry: torus)
-        torusNode3.position = SCNVector3(x: -10, y: 0, z: -60)
-        torusNode3.rotation = SCNVector4(x: Float(0.0), y: Float(1.0), z: Float(1.0), w: Float(M_PI))
-        thisScene.rootNode.addChildNode(torusNode3)
-
-        let torusNode4 = SCNNode(geometry: torus)
-        torusNode4.position = SCNVector3(x: 0, y: 0, z: -80)
-        torusNode4.rotation = SCNVector4(x: Float(0.0), y: Float(1.0), z: Float(1.0), w: Float(M_PI))
-        thisScene.rootNode.addChildNode(torusNode4)
+        createGeometry(torus, xPos: 0, yPos: 0, zPos: -20)
+        createGeometry(torus, xPos: 10, yPos: 0, zPos: -40)
+        createGeometry(torus, xPos: -10, yPos: 0, zPos: -60)
+        createGeometry(torus, xPos: 0, yPos: 0, zPos: -80)
         
         torus.materials = [material]
         
@@ -95,10 +80,16 @@ class DepthOfFieldViewer: SCNView
         // floor...
         
         let floor = SCNFloor()
-        let floorNode = SCNNode(geometry: floor)
-        floorNode.position = SCNVector3(x: 0, y: -10, z: -50)
+        createGeometry(floor, xPos: 0, yPos: -10, zPos: -50, wRot: 0)
         floor.materials = [floorMaterial]
-        
-        thisScene.rootNode.addChildNode(floorNode)
     }
+    
+    func createGeometry(geometry: SCNGeometry, xPos: Float, yPos: Float, zPos: Float, wRot: Float = Float(M_PI))
+    {
+        let node = SCNNode(geometry: geometry)
+        node.position = SCNVector3(x: xPos, y: yPos, z: zPos)
+        node.rotation = SCNVector4(x: Float(0.0), y: Float(1.0), z: Float(1.0), w: wRot)
+        scene?.rootNode.addChildNode(node)
+    }
+    
 }
