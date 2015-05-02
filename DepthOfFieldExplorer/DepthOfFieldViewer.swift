@@ -26,21 +26,19 @@ class DepthOfFieldViewer: SCNView
         var material: SCNMaterial = SCNMaterial()
         material.diffuse.contents = UIImage(named: "checkerboard.jpg")
         
+        var floorMaterial: SCNMaterial = SCNMaterial()
+        floorMaterial.diffuse.contents = UIImage(named: "grid.jpg")
+        floorMaterial.diffuse.wrapS = SCNWrapMode.Repeat
+        floorMaterial.diffuse.wrapT = SCNWrapMode.Repeat
+        
         let thisScene = SCNScene()
         
         scene = thisScene
         
-        /*
-        scene?.fogStartDistance = 20
-        scene?.fogEndDistance = 80
-        scene?.fogDensityExponent = 0
-        scene?.fogColor = UIColor.blueColor().CGColor
-        */
-        
         // camera...
         
-        camera.xFov = 50
-        camera.yFov = 50
+        camera.xFov = 60
+        camera.yFov = 60
         
         let cameraNode = SCNNode()
         
@@ -93,5 +91,14 @@ class DepthOfFieldViewer: SCNView
         omniLightNode.position = SCNVector3(x: -5, y: 8, z: 20)
         
         thisScene.rootNode.addChildNode(omniLightNode)
+        
+        // floor...
+        
+        let floor = SCNFloor()
+        let floorNode = SCNNode(geometry: floor)
+        floorNode.position = SCNVector3(x: 0, y: -10, z: -50)
+        floor.materials = [floorMaterial]
+        
+        thisScene.rootNode.addChildNode(floorNode)
     }
 }

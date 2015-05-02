@@ -16,6 +16,7 @@
 		3EB24FED1AF29BF4001008F6 /* DepthOfFieldViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB24FEC1AF29BF4001008F6 /* DepthOfFieldViewer.swift */; };
 		3EB24FF01AF33D48001008F6 /* checkerboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EB24FEF1AF33D48001008F6 /* checkerboard.jpg */; };
 		3EB24FF31AF352FA001008F6 /* LabelledSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB24FF21AF352FA001008F6 /* LabelledSegmentedControl.swift */; };
+		BEB17B251AF47BE8003E7B76 /* grid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEB17B241AF47BE8003E7B76 /* grid.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		3EB24FEC1AF29BF4001008F6 /* DepthOfFieldViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthOfFieldViewer.swift; sourceTree = "<group>"; };
 		3EB24FEF1AF33D48001008F6 /* checkerboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkerboard.jpg; sourceTree = "<group>"; };
 		3EB24FF21AF352FA001008F6 /* LabelledSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelledSegmentedControl.swift; sourceTree = "<group>"; };
+		BEB17B241AF47BE8003E7B76 /* grid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grid.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		3EB24FEE1AF33D48001008F6 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				BEB17B241AF47BE8003E7B76 /* grid.jpg */,
 				3EB24FEF1AF33D48001008F6 /* checkerboard.jpg */,
 			);
 			path = assets;
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EB24FD11AF29B95001008F6 /* Main.storyboard in Resources */,
+				BEB17B251AF47BE8003E7B76 /* grid.jpg in Resources */,
 				3EB24FD61AF29B95001008F6 /* LaunchScreen.xib in Resources */,
 				3EB24FD31AF29B95001008F6 /* Images.xcassets in Resources */,
 				3EB24FF01AF33D48001008F6 /* checkerboard.jpg in Resources */,
@@ -447,6 +451,7 @@
 				3EB24FE71AF29B95001008F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EB24FE81AF29B95001008F6 /* Build configuration list for PBXNativeTarget "DepthOfFieldExplorerTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +460,7 @@
 				3EB24FEA1AF29B95001008F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -40,6 +40,14 @@ class LabelledSegmentedControl: UIControl
         sendActionsForControlEvents(UIControlEvents.ValueChanged)
     }
     
+    override var enabled: Bool
+    {
+        didSet
+        {
+            UIView.animateWithDuration(0.2, animations: {self.alpha = self.enabled ? 1 : 0.5})
+        }
+    }
+    
     var selectedSegmentIndex: Int
     {
         set
